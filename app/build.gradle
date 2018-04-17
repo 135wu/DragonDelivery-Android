@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.charles.dragondelivery"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","arm64-v8a","x86_64"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+
+    compile files('libs/universal-image-loader-1.9.5.jar')//Universal-Image-Loader
+
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.yanzhenjie.nohttp:nohttp:1.1.1'//NoHttp
+    compile 'com.amap.api:map2d:latest.integration'//高德地图2D地图
+    compile 'com.amap.api:search:latest.integration'//高德地图搜索框架
+    compile 'com.amap.api:location:latest.integration'//高德地图定位
+    compile 'com.alibaba:fastjson:1.2.46'//fastJson
+    compile 'com.youth.xframe:xframe:1.1.2'//xframe
+    compile 'com.youth.banner:banner:1.4.10'//banner
+    compile 'com.android.support:support-v4:26.0.0-alpha1'
+    testCompile 'junit:junit:4.12'
+}
