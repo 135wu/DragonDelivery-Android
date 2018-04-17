@@ -24,5 +24,19 @@ public class PXApp {
         return instance;
     }
 
+    public String getUuid() {
+        return uuid;
+    }
 
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    public String getChannelId() {
+        return channelId;
+    }
+
+    public void setChannelId(String channelId) {
+        this.channelId = channelId;
+    }
 }

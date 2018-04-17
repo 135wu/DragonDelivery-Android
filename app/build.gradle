@@ -29,8 +29,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
-
     compile files('libs/universal-image-loader-1.9.5.jar')//Universal-Image-Loader
 
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
@@ -39,8 +37,9 @@ dependencies {
     compile 'com.amap.api:search:latest.integration'//高德地图搜索框架
     compile 'com.amap.api:location:latest.integration'//高德地图定位
     compile 'com.alibaba:fastjson:1.2.46'//fastJson
-    compile 'com.youth.xframe:xframe:1.1.2'//xframe
+
     compile 'com.youth.banner:banner:1.4.10'//banner
+    compile 'com.github.vondear:RxTools:v1.7.6.2'//工具类
     compile 'com.android.support:support-v4:26.0.0-alpha1'
     testCompile 'junit:junit:4.12'
 }
